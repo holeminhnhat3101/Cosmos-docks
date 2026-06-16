@@ -1,0 +1,100 @@
+{
+    "manufacturer": "Ho Le Minh Nhat",
+    "keyboard_name": "cosmos_docks",
+    "maintainer": "holeminhnhat3101",
+    "url": "https://github.com/holeminhnhat3101",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "diode_direction": "COL2ROW",
+
+    "features": {
+        "bootmagic": true,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true,
+        "encoder": true,
+        "encoder_map": true,
+        "rgb_matrix": true,
+        "oled": true
+    },
+
+    "matrix_size": {
+        "rows": 3,
+        "cols": 3
+    },
+
+    "matrix_pins": {
+        "cols": ["GP29", "GP2", "GP1"],
+        "rows": ["GP26", "GP27", "GP28"]
+    },
+
+    "encoder": {
+        "rotary": [
+            {
+                "pin_a": "GP3",
+                "pin_b": "GP4",
+                "resolution": 4
+            }
+        ]
+    },
+
+    "rgb_matrix": {
+        "driver": "ws2812",
+        "max_brightness": 120,
+        "sleep": true,
+        "animations": {
+            "solid_color": true,
+            "breathing": true,
+            "cycle_all": true,
+            "rainbow_moving_chevron": true,
+            "solid_reactive_simple": true
+        },
+        "layout": [
+            { "matrix": [0, 0], "x": 37,  "y": 12, "flags": 4 },
+            { "matrix": [0, 1], "x": 112, "y": 12, "flags": 4 },
+            { "matrix": [0, 2], "x": 187, "y": 12, "flags": 4 },
+
+            { "matrix": [1, 2], "x": 187, "y": 32, "flags": 4 },
+            { "matrix": [1, 1], "x": 112, "y": 32, "flags": 4 },
+            { "matrix": [1, 0], "x": 37,  "y": 32, "flags": 4 },
+
+            { "matrix": [2, 0], "x": 37,  "y": 52, "flags": 4 },
+            { "matrix": [2, 1], "x": 112, "y": 52, "flags": 4 },
+            { "matrix": [2, 2], "x": 187, "y": 52, "flags": 4 },
+
+            { "x": 10,  "y": 12, "flags": 2 },
+            { "x": 214, "y": 12, "flags": 2 },
+            { "x": 10,  "y": 52, "flags": 2 },
+            { "x": 214, "y": 52, "flags": 2 }
+        ]
+    },
+
+    "ws2812": {
+        "pin": "GP0",
+        "driver": "vendor"
+    },
+
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x0000",
+        "vid": "0xFEED"
+    },
+
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                { "matrix": [0, 0], "x": 0, "y": 0 },
+                { "matrix": [0, 1], "x": 1, "y": 0 },
+                { "matrix": [0, 2], "x": 2, "y": 0 },
+
+                { "matrix": [1, 0], "x": 0, "y": 1 },
+                { "matrix": [1, 1], "x": 1, "y": 1 },
+                { "matrix": [1, 2], "x": 2, "y": 1 },
+
+                { "matrix": [2, 0], "x": 0, "y": 2 },
+                { "matrix": [2, 1], "x": 1, "y": 2 },
+                { "matrix": [2, 2], "x": 2, "y": 2 }
+            ]
+        }
+    }
+}
